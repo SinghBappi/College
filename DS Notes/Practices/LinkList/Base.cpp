@@ -147,6 +147,24 @@ Node *merging(Node *head1, Node *head2)
     return head1;
 }
 
+// Spliting in to 2 Halves
+void splithead(Node *head, Node *&FirstHalf, Node *&SecondHalf)
+{
+    if (head == NULL)
+    {
+        FirstHalf = head;
+        SecondHalf = NULL;
+    }
+    Node * slow = head;
+    Node * fast= head->next;
+    while(fast!=NULL and fast->next!=NULL){
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    FirstHalf = head;
+    SecondHalf = slow->next;
+    slow->next=NULL;
+}
 int main()
 {
     // cout<<"Link list";
@@ -154,6 +172,8 @@ int main()
     head->next = new Node(33);
     head->next->next = new Node(93);
     head->next->next->next = new Node(1);
+    Node* firsthalf = nullptr;
+    Node* secondhalf = nullptr;
     traversal(head);
     insertatend(head, 8);
     traversal(head);
@@ -162,6 +182,10 @@ int main()
     searching(head, 1);
     traversal(head);
     discorev(head);
+    splithead(head,firsthalf,secondhalf);
+    traversal(head);
+
+
 
     return 0;
 }
