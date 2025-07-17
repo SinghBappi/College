@@ -61,36 +61,70 @@ void deleteAtEnd(Node *&head)
         head = NULL;
     }
     Node *temp = head;
-    while (temp->next!= NULL)
+    while (temp->next != NULL)
     {
         temp = temp->next;
     }
-    temp->prev->next=NULL;
+    temp->prev->next = NULL;
     delete temp;
-
-
 }
 
-void searching(Node* head,int key){
-    if(head==NULL){
-        cout<<"The Linked list is empty!";
+void searching(Node *head, int key)
+{
+    if (head == NULL)
+    {
+        cout << "The Linked list is empty!";
         return;
     }
-    Node* temp = head;
-    int i=0;
-    while(temp!=NULL){
+    Node *temp = head;
+    int i = 0;
+    while (temp != NULL)
+    {
         i++;
-        if(temp->data==key){
-            cout<<"\n"<<"Found at "<<i<<"and the element is "<<key;
-            return;   
+        if (temp->data == key)
+        {
+            cout << "\n"
+                 << "Found at " << i << "and the element is " << key<<endl;
+            return;
         }
-        temp=temp->next;
+        temp = temp->next;
     }
-    cout<<"\nUnable to found!";
+    cout << "\nUnable to found!";
     return;
-
 }
 
+void sorted(Node *head)
+{
+    if (head == NULL)
+    {
+        cout << "Empty";
+        return;
+    }
+    bool swaped;
+    Node *ptr1;
+    Node *lptr = NULL;
+    do
+    {
+        swaped = false;
+        ptr1 = head;
+
+        // Node *ptr1;
+        while (ptr1->next != lptr)
+        {
+            if (ptr1->data > ptr1->next->data)
+            {
+                // swap(ptr1->data,ptr->next->data);
+                int temp = ptr1->data;
+                ptr1->data = ptr1->next->data;
+                ptr1->next->data = temp;
+                swaped = true;
+            }
+            ptr1 = ptr1->next;
+        }
+        lptr = ptr1;
+
+    } while (swaped);
+}
 // void
 int main()
 {
@@ -99,13 +133,14 @@ int main()
     create(head, 60);
     create(head, 90);
     create(head, 10);
-    cout<<"Traversal:"<<endl;
+    cout << "Traversal:" << endl;
     traversal(head);
     deleteAtEnd(head);
-    cout<<"\nDelete:"<<endl;
+    cout << "\nDelete:" << endl;
     traversal(head);
-    searching((head),90);
-    
+    searching((head), 90);
+    sorted(head);
+    traversal(head);
 
     // Write C++ code here
     // std::cout << "Try programiz.pro";
