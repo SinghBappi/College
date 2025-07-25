@@ -1,12 +1,12 @@
 # Get user input
-value = input("Enter something to reverse: ")
+val = input("Enter something to reverse: ")
 
 # Create an empty string to hold the reversed version
-reversed_value = ""
+revo = ""
 
 # Use a for loop to go through the string backward
-for char in value:
-    reversed_value = char + reversed_value
+for char in val:
+    revo = char + revo
 
 # Show the result
-print("Reversed:", reversed_value)
+print("Reversed:", revo)
