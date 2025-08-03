@@ -158,5 +158,8 @@ if copy == rev:
     print("Palindrome Number!")
     
 
+def pali(num):
+    return str(num)==str(num)[::-1]
+print(pali(121))
 
 
