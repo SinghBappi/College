@@ -162,4 +162,8 @@ def pali(num):
     return str(num)==str(num)[::-1]
 print(pali(121))
 
+n = int(input("Enter a Number:"))
+for i in range(1,11):
+    # print(f"{n} x {i} = {n*i}")
+    print(n," x " ,i, " = ", n*i)
 
