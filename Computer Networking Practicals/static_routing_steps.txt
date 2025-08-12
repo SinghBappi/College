@@ -1,0 +1,123 @@
+Skip to content
+You said:
+ Step one open Cisco Packet Tracer
+Step two drag and drop the static router and and devices like PC
+Join them or connect with them with a connection cable or wire
+And label them for avoiding confusion
+Configure the PC ONE and PC ZERO respectively
+For configuring the PC1 and PC2 go to the OR Click to the PC, And then click on Desktop tab -> IP configuration -> Fill it IP address and default gateway.
+Do both for both PCS
+
+Configure the routers first go to the OR click the router -> Go to the Fast Ethernet 0/0 - > fill The necessary details IP configuration that includes IPV 4 address subnet mask and turn on the port status on Same for Fast Ethernet 0/1
+
+Do this see conflagration for router another one
+
+Again click on router and then go to the config tab And then go to the Static tab -> Add network mask next hop respectively
+
+Click on Add
+
+For verifying the completion of practical we should pass a message from 1PC to another
+this is the steps for static routing;
+ChatGPT said:
+Got it — you’ve basically written a rough procedure for static routing in Cisco Packet Tracer, but it’s a bit messy and repetitive.
+I’ll rewrite it in clear step-by-step format so it’s easier to follow for your journal or practical.
+
+Steps for Static Routing in Cisco Packet Tracer
+Step 1 – Open Cisco Packet Tracer
+Launch Cisco Packet Tracer on your computer.
+
+Step 2 – Add Devices
+
+Drag and drop the required devices into the workspace:
+
+1 Router
+
+2 PCs (PC0 and PC1)
+
+Use the cable tool to connect them:
+
+PC0 → Router (FastEthernet0/0)
+
+PC1 → Router (FastEthernet0/1)
+
+Use labels to name each device and avoid confusion.
+
+Step 3 – Configure the PCs
+
+Click on PC0 → Go to Desktop tab → Select IP Configuration.
+
+Enter the IP Address and Default Gateway for PC0.
+
+Repeat the same for PC1 with its respective IP Address and Default Gateway
+
+You said:
+wait u have rewrite it in format:
+step 1(heading):
+one line instruction
+IPv4:
+subnet
+default gateway
+
+step 2 (heading):
+pc0 -> desktop ->> IP config -> static -> 
+IPv4:
+subnet
+default gateway
+
+and other steps for it 
+ChatGPT said:
+Got it ✅
+I’ll rewrite your Static Routing Steps in the exact Step Heading → One-Line Instruction → IPv4, Subnet, Default Gateway format you want.
+
+Step 1: Add Devices and Connect
+Drag and drop 1 Router and 2 PCs (PC0 & PC1) into the workspace and connect them using copper straight-through cables.
+
+Step 2: Configure PC0
+PC0 → Desktop → IP Configuration → Static
+
+IPv4: 192.168.1.2
+
+Subnet Mask: 255.255.255.0
+
+Default Gateway: 192.168.1.1
+
+Step 3: Configure PC1
+PC1 → Desktop → IP Configuration → Static
+
+IPv4: 192.168.2.2
+
+Subnet Mask: 255.255.255.0
+
+Default Gateway: 192.168.2.1
+
+Step 4: Configure Router – FastEthernet 0/0
+Router → Config → FastEthernet0/0 → On
+
+IPv4: 192.168.1.1
+
+Subnet Mask: 255.255.255.0
+
+Step 5: Configure Router – FastEthernet 0/1
+Router → Config → FastEthernet0/1 → On
+
+IPv4: 192.168.2.1
+
+Subnet Mask: 255.255.255.0
+
+Step 6: Add Static Routes in Router
+Router → Config → Static → Add
+
+Network: 192.168.1.0 → Mask: 255.255.255.0 → Next Hop: 192.168.2.1
+
+Network: 192.168.2.0 → Mask: 255.255.255.0 → Next Hop: 192.168.1.1
+
+Step 7: Test Connectivity
+Use PC0 → Desktop → Command Prompt → ping 192.168.2.2 to check if PC1 responds.
+
+If you want, I can also make a same-format version for 2 routers instead of 1 router. That’s usually how static routing is taught.
+Do you want me to make that too?
+
+
+
+No file chosenNo file chosen
+ChatGPT can make mistakes. Check important info. See .
