@@ -1,0 +1,7 @@
+s1 = int(input("Enter:"))
+s2 = int(input("Enter:"))
+s3 = int(input("Enter:"))
+s4 = int(input("Enter:"))
+s5 = int(input("Enter:"))
+s6 = int(input("Enter:"))
+print("Avg:",(s1+s2+s3+s4+s5+s6)/6)
